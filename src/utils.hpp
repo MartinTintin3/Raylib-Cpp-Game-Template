@@ -9,12 +9,6 @@ class Utils {
 		static Vector2 interpolate_vectors(Vector2 a, Vector2 b, double alpha) {
 			return Vector2{ (float)(b.x * alpha + a.x * (1.0 - alpha)), (float)(b.y * alpha + a.y * (1.0 - alpha)) };
 		}
-		static Vector2 subtract_vectors(Vector2 a, Vector2 b) {
-			return Vector2{ a.x - b.x, a.y - b.y };
-		}
-		static Vector2 add_vectors(Vector2 a, Vector2 b) {
-			return Vector2{ a.x + b.x, a.y + b.y };
-		}
 		static Vector2 scale_vector(Vector2 a, double scale) {
 			return Vector2{ (float)(a.x * scale), (float)(a.y * scale) };
 		}
