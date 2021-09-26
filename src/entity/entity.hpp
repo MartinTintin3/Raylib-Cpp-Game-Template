@@ -24,8 +24,8 @@ class Entity {
 		virtual bool check_collision(Rectangle collision_area) const;
 		virtual bool check_collision(Vector2 collision_point) const;
 		virtual Vector2 get_center() const;
-		virtual void move(Vector2 position) const;
-		virtual void teleport(Vector2 position) const;
+		virtual void move(Vector2 position);
+		virtual void teleport(Vector2 position);
 	protected:
 		virtual void update_values(const double& delta) final;
 };
