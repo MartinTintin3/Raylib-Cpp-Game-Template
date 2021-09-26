@@ -8,7 +8,7 @@
 
 class Entity {
 	public:
-		Entity(Vector2 position, Vector2 size, Color color = RED, Health health = Health{ 100 });
+		Entity(Vector2 position, Vector2 size, double speed = 10, Color color = RED, Health health = Health{ 100 });
 		virtual ~Entity() = default;
 		Vector2 position;
 		Vector2 previous_position;
