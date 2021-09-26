@@ -1,7 +1,6 @@
 #include "entity.hpp"
 
 #include <raylib-cpp.hpp>
-#include <iostream>
 
 #include "constants.hpp"
 #include "utils.hpp"
