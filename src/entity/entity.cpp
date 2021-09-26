@@ -5,7 +5,7 @@
 #include "constants.hpp"
 #include "utils.hpp"
 
-Entity::Entity(Vector2 position, Vector2 size, double speed, Color color, Health health):
+Entity::Entity(Vector2 position, Vector2 size, float speed, Color color, Health health):
 		position{ position }, previous_position{ position.x, position.y },
 		velocity{ 0, 0 }, acceleration{ 0, 0 }, speed{ speed },
 		size{ size }, color{ color }, health{ health } { }
