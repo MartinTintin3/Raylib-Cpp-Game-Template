@@ -25,7 +25,6 @@ class Game {
 		void tick(const double& delta);
 		void render(const double& alpha);
 		void handle_input(const double& delta);
-		void update_interpolation();
 		void setup_camera(Camera2D& camera);
 		void update_camera(const double& alpha);
 };
