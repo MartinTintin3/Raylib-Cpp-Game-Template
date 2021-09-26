@@ -47,7 +47,7 @@ void Game::loop() {
 	double alpha_before_pause = 0.0;
 	double current_time = GetTime();
 	Keybind& pause_keybind = keybind_manager.get("pause");
-	bool paused_from_focus = false;
+	// bool paused_from_focus = false;
 
 	while(!WindowShouldClose()) {
 		double new_time = GetTime();
