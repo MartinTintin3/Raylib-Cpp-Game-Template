@@ -59,7 +59,6 @@ void Game::loop() {
 				this->paused = false;
 				paused_from_focus = false;
 			}*/
-			if(!this->paused) this->update_interpolation();
 			if(!this->paused) this->handle_input(timestep);
 			if(!this->paused) this->tick(timestep);
 			accumulator -= timestep;
@@ -102,10 +101,6 @@ void Game::render(const double& alpha) {
 
 void Game::handle_input(const double& delta) {
 	// Handle all keybinds using this->keybind_manager.is_on("keybind_name") and use delta for movement/position change
-}
-
-void Game::update_interpolation() {
-	// Update every entity's previous_position to be the current position for interpolation
 }
 
 void Game::setup_camera(Camera2D& camera) {
