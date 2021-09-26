@@ -9,7 +9,7 @@
 Entity::Entity(Vector2 position, Vector2 size, Color color, Health health):
 		position{ position }, previous_position{ position.x, position.y },
 		velocity{ 0, 0 }, acceleration{ 0, 0 },
-		size{ size }, color{ color }health{ health } { }
+		size{ size }, color{ color }, health{ health } { }
 
 void Entity::tick(const double& delta) {
 	this->update_values(delta);
