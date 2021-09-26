@@ -65,3 +65,7 @@ void Entity::teleport_to(Vector2 position) {
 	this->previous_position = position;
 	this->position = position;
 }
+
+void Entity::update_interpolation() {
+	this->previous_position = this->position;
+}
