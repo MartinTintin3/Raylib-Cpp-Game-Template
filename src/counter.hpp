@@ -2,8 +2,6 @@
 #define TPS_COUNTER_HPP
 #pragma once
 
-#include "timer.hpp"
-
 class TPS_Counter {
 	private:
 		long tps = 0;
