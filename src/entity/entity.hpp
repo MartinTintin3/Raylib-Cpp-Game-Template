@@ -20,15 +20,16 @@ class Entity {
 		Health health;
 		virtual void tick(const double& delta);
 		virtual void render(const double& alpha);
-		virtual Vector2 interpolate(const double& alpha) const;
+		Vector2 interpolate(const double& alpha) const;
 		virtual void reset_values() final;
 		virtual bool check_collision(Rectangle collision_area) const;
 		virtual bool check_collision(Vector2 collision_point) const;
 		virtual Vector2 get_center() const;
-		virtual void move(Vector2 position);
-		virtual void move_to(Vector2 position);
-		virtual void teleport(Vector2 position);
-		virtual void teleport_to(Vector2 position);
+		void move(Vector2 position, const double& delta);
+		void move_to(Vector2 position);
+		void teleport(Vector2 position, const double& delta);
+		void teleport_to(Vector2 position);
+		void update_interpolation();
 	protected:
 		virtual void update_values(const double& delta) final;
 };
