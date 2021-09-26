@@ -59,13 +59,13 @@ void Game::loop() {
 		while(accumulator >= timestep) {
 			keybind_manager.tick();
 			this->paused = pause_keybind.is_on();
-			if(!IsWindowFocused()) {
+			/*if(!IsWindowFocused()) {
 				this->paused = true;
 				paused_from_focus = true;
 			} else if(IsWindowFocused() && paused_from_focus && !pause_keybind.is_on()) {
 				this->paused = false;
 				paused_from_focus = false;
-			}
+			}*/
 			if(!this->paused) this->update_interpolation();
 			if(!this->paused) this->handle_input(timestep);
 			if(!this->paused) this->tick(timestep);
@@ -116,19 +116,16 @@ void Game::update_interpolation() {
 
 void Game::setup_camera(Camera2D& camera) {
 	// Setup camera's target, offset, and zoom
-	// this->camera.target = { this->player.position.x + this->player.size.x / 2, this->player.position.y + this->player.size.y / 2 };
+	// this->camera.target = { this->target.position.x + this->target.size.x / 2, this->target.position.y + this->target.size.y / 2 };
 	// this->camera.offset = Vector2{ ((float) GetScreenWidth()) / 2, ((float) GetScreenHeight()) / 2 };
 	// this->camera.zoom = 1.0f;
 }
 
 void Game::update_camera(const double& alpha) {
 	// Update camera's target, offset, and zoom based on interpolated position, screen width / height, and screen height / initial window height
-	/*
-	const Vector2 interpolated = this->player.interpolate(alpha);
-	this->camera.target = { interpolated.x + this->player.size.x / 2, interpolated.y + this->player.size.y / 2 };
-	this->camera.offset = Vector2{ ((float) GetScreenWidth()) / 2, ((float) GetScreenHeight()) / 2 };
-	this->camera.zoom = GetScreenHeight() / (float) INITIAL_WINDOW_HEIGHT; // This value should be based on which screen dimension is more important in the viewport, so if it is more important to not see more of the left and right of the play area based on screen size, use the ratio of screen height to initial window height, otherwise use width
-	*/
+	// const Vector2 interpolated = this->player.interpolate(alpha);
+	// this->camera.target = { this->target.position.x + this->target.size.x / 2, this->target.position.y + this->target.size.y / 2 };
+	// this->camera.offset = Vector2{ ((float) GetScreenWidth()) / 2, ((float) GetScreenHeight()) / 2 };
 }
 
 Game::~Game() {
