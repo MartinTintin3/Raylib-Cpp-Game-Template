@@ -117,6 +117,10 @@ void Game::update_camera(const double& alpha) {
 	// this->camera.offset = Vector2{ ((float) GetScreenWidth()) / 2, ((float) GetScreenHeight()) / 2 };
 }
 
+void Game::update_interpolation() {
+	// Call update_interpolation on every entity in the game
+}
+
 Game::~Game() {
 	this->destroy();
 }
