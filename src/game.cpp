@@ -86,7 +86,8 @@ void Game::render(const double& alpha) {
 	this->update_camera(alpha);
 	BeginDrawing();
 		ClearBackground(RAYWHITE);
-		DrawLineEx(Utils::window_center(), Vector2Add(Utils::window_center(), Utils::normalize_center_to_mouse(40.0f * this->camera.zoom)), 8.0f, BLACK);
+		// To draw a "gun" extending from the center:
+		// DrawLineEx(Utils::window_center(), Vector2Add(Utils::window_center(), Utils::normalize_center_to_mouse(40.0f * this->camera.zoom)), 8.0f, BLACK);
 		BeginMode2D(this->camera);
 			// Render everything here using the alpha value as the parameter for the entity's render method
 		EndMode2D();
