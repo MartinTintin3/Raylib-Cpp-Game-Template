@@ -27,6 +27,7 @@ class Game {
 		void handle_input(const double& delta);
 		void setup_camera(Camera2D& camera);
 		void update_camera(const double& alpha);
+		void update_interpolation();
 };
 
 #endif
