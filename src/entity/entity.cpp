@@ -19,8 +19,7 @@ void Entity::render(const double& alpha) { }
 void Entity::update_values(const double& delta) {
 	velocity.x += acceleration.x * delta;
 	velocity.y += acceleration.y * delta;
-	position.x += velocity.x * delta;
-	position.y += velocity.y * delta;
+	this->move(velocity, delta);
 }
 
 void Entity::reset_values() {
