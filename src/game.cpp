@@ -1,11 +1,6 @@
 #include "game.hpp"
 
 #include <raylib-cpp.hpp>
-#include <chrono>
-#include <iomanip>
-#include <iostream>
-#include <fstream>
-#include <algorithm>
 
 #include "counter.hpp"
 #include "constants.hpp"
@@ -14,8 +9,6 @@
 #include "keybind/keybind.hpp"
 
 #define TARGET_TPS 20
-
-using namespace std::chrono_literals;
 
 Game::Game(std::string title):
 		camera{ }, keybind_manager{ }, tps_counter{ },
