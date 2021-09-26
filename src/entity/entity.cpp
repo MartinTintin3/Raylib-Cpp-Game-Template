@@ -44,3 +44,25 @@ bool Entity::check_collision(Vector2 collision_point) const {
 Vector2 Entity::get_center() const {
 	return Vector2{ this->position.x + this->size.x / 2, this->position.y + this->size.y / 2 };
 }
+
+void Entity::move(Vector2 position) {
+	this->previous_position = this->position;
+	this->position.x += position.x;
+	this->position.y += position.y;
+}
+
+void Entity::move_to(Vector2 position) {
+	this->previous_position = this->position;
+	this->position = position;
+}
+
+void Entity::teleport(Vector2 position) {
+	this->previous_position = position;
+	this->position.x += position.x;
+	this->position.y += position.y;
+}
+
+void Entity::teleport_to(Vector2 position) {
+	this->previous_position = position;
+	this->position = position;
+}
