@@ -116,8 +116,8 @@ void Game::setup_camera(Camera2D& camera) {
 
 void Game::update_camera(const double& alpha) {
 	// Update camera's target, offset, and zoom based on interpolated position, screen width / height, and screen height / initial window height
-	// const Vector2 interpolated = this->player.interpolate(alpha);
-	// this->camera.target = { this->target.position.x + this->target.size.x / 2, this->target.position.y + this->target.size.y / 2 };
+	// const Vector2 interpolated = this->target.interpolate(alpha);
+	// this->camera.target = { interpolated.x + this->target.size.x / 2, interpolated.y + this->target.size.y / 2 };
 	// this->camera.offset = Vector2{ ((float) GetScreenWidth()) / 2, ((float) GetScreenHeight()) / 2 };
 }
 
