@@ -59,6 +59,7 @@ void Game::loop() {
 				this->paused = false;
 				paused_from_focus = false;
 			}*/
+			if(!this->paused) this->update_interpolation();
 			if(!this->paused) this->handle_input(timestep);
 			if(!this->paused) this->tick(timestep);
 			accumulator -= timestep;
