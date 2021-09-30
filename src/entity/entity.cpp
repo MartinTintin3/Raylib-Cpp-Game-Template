@@ -56,10 +56,12 @@ void Entity::move_to(Vector2 position) {
 void Entity::teleport(Vector2 position, const double& delta) {
 	this->position.x += position.x * delta;
 	this->position.y += position.y * delta;
+	this->previous_position = this->position;
 }
 
 void Entity::teleport_to(Vector2 position) {
 	this->position = position;
+	this->previous_position = this->position;
 }
 
 void Entity::update_interpolation() {
